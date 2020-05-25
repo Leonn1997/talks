@@ -1,0 +1,1254 @@
+<!doctype html>
+<html lang="en" prefix="og: http://ogp.me/ns#">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- CLEAN MARKUP = GOOD KARMA.
+      Hi source code lover,
+
+      you're a curious person and a fast learner ;)
+      Let's make something beautiful together. Contribute on Github:
+      https://github.com/webslides/webslides
+
+      Thanks!
+      -->
+
+    <!-- SEO -->
+    <title>Solving a NLP problem with K8s tooling</title>
+    <meta name="description" content="Solving a NLP problem with K8s tooling">
+
+    <!-- URL CANONICAL -->
+    <!-- <link rel="canonical" href="http://your-url.com/permalink"> -->
+
+    <!-- Google Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,700,700i%7CMaitree:200,300,400,600,700&amp;subset=latin-ext"
+        rel="stylesheet">
+
+    <!-- CSS Base -->
+    <link rel="stylesheet" type='text/css' media='all' href="../static/css/webslides.css">
+    <link href="https://file.myfontastic.com/UJfVyhZuef4cFDapF9rmo4/icons.css" rel="stylesheet">
+    <!-- Optional - CSS SVG Icons (Font Awesome) -->
+    <link rel="stylesheet" type="text/css" media="all" href="../static/css/svg-icons.css">
+
+    <!-- SOCIAL CARDS (ADD YOUR INFO) -->
+
+    <!-- FACEBOOK -->
+    <meta property="og:url" content="https://talks.craftcodecrew.com/#slide=1"> <!-- EDIT -->
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Solving a NLP problem with K8s tooling"> <!-- EDIT -->
+    <meta property="og:description" content="Solving a NLP problem with K8s tooling">
+    <!-- EDIT -->
+    <meta property="og:updated_time" content="2017-01-04T17:26:50"> <!-- EDIT -->
+    <meta property="og:image" content="../static/images/share-webslides.jpg"> <!-- EDIT -->
+
+    <!-- TWITTER -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@webslides"> <!-- EDIT -->
+    <meta name="twitter:creator" content="@jlantunez"> <!-- EDIT -->
+    <meta name="twitter:title" content="Solving a NLP problem with K8s tooling"> <!-- EDIT -->
+    <meta name="twitter:description" content="Solving a NLP problem with K8s tooling"> <!-- EDIT -->
+    <meta name="twitter:image" content="../static/images/share-webslides.jpg"> <!-- EDIT -->
+
+    <!-- FAVICONS -->
+    <link rel="shortcut icon" sizes="16x16" href="../static/images/favicons/favicon.png">
+    <link rel="shortcut icon" sizes="32x32" href="../static/images/favicons/favicon-32.png">
+    <link rel="apple-touch-icon icon" sizes="76x76" href="../static/images/favicons/favicon-76.png">
+    <link rel="apple-touch-icon icon" sizes="120x120" href="../static/images/favicons/favicon-120.png">
+    <link rel="apple-touch-icon icon" sizes="152x152" href="../static/images/favicons/favicon-152.png">
+    <link rel="apple-touch-icon icon" sizes="180x180" href="../static/images/favicons/favicon-180.png">
+    <link rel="apple-touch-icon icon" sizes="192x192" href="../static/images/favicons/favicon-192.png">
+
+    <!-- Android -->
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="theme-color" content="#333333">
+</head>
+
+<body>
+
+    <main role="main">
+        <article id="webslides">
+
+            <!-- Quick Guide
+          - Each parent <section> in the <article id="webslides"> element is an individual slide.
+          - Vertical sliding = <article id="webslides" class="vertical">
+          - <div class="wrap"> = container 90% / <div class="wrap size-50"> = 45%;
+        -->
+
+
+            <section class="fullscreen bg-blue aligncenter slide current" id="section-1" style="">
+                <div class="embed dark">
+                </div>
+                <!-- .end .embed -->
+                <div class="wrap">
+                    <h2><strong>Solving a NLP problem with K8s tooling</strong></h2>
+                    <p class="text-symbols">* * * </p>
+                    <p>Leon Gottschick</p>
+                </div>
+                <!-- .end .wrap -->
+            </section>
+
+            <section id="section-2" class="slide current" style="">
+                <div class="wrap">
+                    <h3><strong>Who am I & Background Story</strong></h3>
+                    <ul class="flexblock gallery">
+                        <li>
+                            <a href="#">
+                                <figure>
+                                    <img alt="Thumbnail"
+                                        src="img/spokencall/leon.jpg">
+                                    <figcaption>
+                                        <h2>Leon Gottschick</h2>
+                                    </figcaption>
+                                </figure>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <figure>
+                                    <img alt="Thumbnail "
+                                        src="img/spokencall/dhbw_logo.jpg">
+                                    <figcaption>
+                                        <h2>DHBW Karlsruhe</h2>
+                                    </figcaption>
+                                </figure>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <!-- .end .wrap -->
+            </section>
+
+
+            <section id="section-2" class="slide current" style="">
+                <div class="wrap">
+                    <h3>Team</h3>
+                    <ul class="flexblock gallery">
+                        <li>
+                            <a href="#">
+                                <figure>
+                                    <img alt="Thumbnail"
+                                        src="https://avatars2.githubusercontent.com/u/16754986?s=460&v=4">
+                                    <figcaption>
+                                        <h2>Leon Gottschick</h2>
+                                    </figcaption>
+                                </figure>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <figure>
+                                    <img alt="Thumbnail "
+                                        src="https://avatars2.githubusercontent.com/u/16628599?s=460&v=4">
+                                    <figcaption>
+                                        <h2>Cem Philipp Freimoser</h2>
+                                    </figcaption>
+                                </figure>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <figure>
+                                    <img alt="Thumbnail"
+                                        src="https://avatars1.githubusercontent.com/u/14996843?s=460&v=4">
+                                    <figcaption>
+                                        <h2>Dominik Jülg</h2>
+                                    </figcaption>
+                                </figure>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <figure>
+                                    <img alt="Thumbnail "
+                                        src="https://i1.rgstatic.net/ii/profile.image/279833922818079-1443729014936_Q512/Kay_Berkling.jpg">
+                                    <figcaption>
+                                        <h2>Prof. Berkling, PhD</h2>
+                                    </figcaption>
+                                </figure>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <!-- .end .wrap -->
+            </section>
+
+
+            <section id="section-3" class="frame bg-blue aligncenter slide current" style="">
+                <div class="wrap">
+                    <h2 class="text-landing">The Problem</h2>
+                    <p>What is it all about</p>
+                </div>
+                <!-- .end .wrap -->
+            </section>
+
+
+            <section id="section-4" class="slide current" style="">
+                <!--.wrap = container (width: 90%) -->
+                <div class="wrap size-60">
+                    <h3><strong>Spoken CALL</strong> Shared Task</h3>
+                    <hr>
+                    <div class="bg-white fadeInUp">
+                        <ul class="flexblock reasons">
+                            <li cla>
+                                <h2>A Prompt is shown to the child</h2>
+                                <p>Translate: Ich möchte mein Steak durchgebraten <br><span>I would like my steak well done</span></p>
+                            </li>
+                            <li>
+                                <h2>The child fulfills the task by speech</h2>
+                                <P>
+                                    <audio controls>
+                                        <source src="audio/40391.wav" type="audio/wav">
+                                        Your browser does not support the audio element.
+                                    </audio>
+                                </P>
+                            </li>
+                            <li>
+                                <h2>The system generates a Transcript</h2>
+                                <p>I would like my steak well down</p>
+                            </li>
+                            <li>
+                                <h2>Based on the transcript a judgment is generated</h2>
+                                <p>I would like my steak well <b class="bg-red">down</b> </br> (Langugage: 0, Meaning:
+                                    1)</p>
+
+                            </li>
+                        </ul>
+                    </div> <!-- .end .bg-white shadow -->
+                </div>
+                <!-- .end .wrap -->
+            </section>
+
+
+            <section id="section-5" class="slide current" style="">
+                <div class="wrap">
+                    <h3><strong>Two Systems</strong></h3>
+                    <p>The Shared Task consists of two different tasks. One is to build a speech-processing engine, the other one is creating a text-processing engine for the generated transcripts.
+                    </p>
+                    <ul class="flexblock steps">
+                        <!-- li>a? Add blink = <ul class="flexblock steps blink">-->
+                        <li>
+                            <span>
+                                <svg class="fa-heartbeat" viewBox="0 0 512 512">
+                                    <g>
+                                        <rect x="70.01" y="146.717" width="47.924" height="174.553" />
+                                        <rect x="210.032" y="146.717" width="47.924" height="174.553" />
+                                        <rect x="350.053" y="146.717" width="47.924" height="174.553" />
+                                        <rect y="196.717" width="47.924" height="74.553" />
+                                        <rect x="280.042" y="196.717" width="47.924" height="74.553" />
+                                        <rect x="420.063" y="196.717" width="47.924" height="74.553" />
+                                        <rect x="140.021" y="96.717" width="47.924" height="274.553" />
+                                    </g>
+                                    <g>
+                                    </g>
+                                    <g>
+                                    </g>
+                                    <g>
+                                    </g>
+                                    <g>
+                                    </g>
+                                    <g>
+                                    </g>
+                                    <g>
+                                    </g>
+                                    <g>
+                                    </g>
+                                    <g>
+                                    </g>
+                                    <g>
+                                    </g>
+                                    <g>
+                                    </g>
+                                    <g>
+                                    </g>
+                                    <g>
+                                    </g>
+                                    <g>
+                                    </g>
+                                    <g>
+                                    </g>
+                                    <g>
+                                    </g>
+                                </svg>
+                            </span>
+                            <h2>01. Speech-processing</h2>
+                            <p>The audio signal is processed to generate a transcript</p>
+                            <br>
+                            <p> <a target="_blank" href="https://kaldi-asr.org/">#Kaldi</a> <a target="_blank"
+                                    href="https://github.com/mozilla/DeepSpeech/">#DeepSpeech</a> </p>
+                        </li>
+                        <li>
+                            <div class="process step-2"></div>
+                            <span>
+                                <svg class="fa-magic" viewBox="0 0 512 512">
+                                    <g>
+                                        <g>
+                                            <path d="M318.638,0c-106.62,0-193.362,86.742-193.362,193.362c0,38.559,11.351,74.515,30.878,104.711L2.393,451.835
+                                                c-3.191,3.192-3.191,8.364,0,11.555l46.217,46.218c1.532,1.532,3.61,2.392,5.777,2.392c2.167,0,4.245-0.861,5.777-2.392
+                                                L193.46,376.312c0.011-0.011,20.467-20.467,20.467-20.467c30.197,19.527,66.153,30.878,104.712,30.878
+                                                c106.62,0,193.362-86.742,193.362-193.362S425.258,0,318.638,0z M54.387,492.276l-34.664-34.663l98.637-98.636l34.664,34.664
+                                                L54.387,492.276z M164.579,382.084l-34.663-34.664l11.554-11.554l34.664,34.663L164.579,382.084z M187.688,358.975l-34.663-34.664
+                                                l12.719-12.719c10.047,12.962,21.701,24.616,34.664,34.663L187.688,358.975z M318.638,370.383
+                                                c-97.61,0-177.021-79.411-177.021-177.021S221.028,16.34,318.638,16.34s177.021,79.412,177.021,177.021
+                                                S416.248,370.383,318.638,370.383z" />
+                                        </g>
+                                    </g>
+                                    <g>
+                                        <g>
+                                            <path d="M384,174.285H253.276c-4.512,0-8.17,3.657-8.17,8.17s3.658,8.17,8.17,8.17H384c4.513,0,8.17-3.657,8.17-8.17
+                                                S388.513,174.285,384,174.285z" />
+                                        </g>
+                                    </g>
+                                    <g>
+                                        <g>
+                                            <path d="M384,206.966H253.276c-4.512,0-8.17,3.657-8.17,8.17s3.658,8.17,8.17,8.17H384c4.513,0,8.17-3.657,8.17-8.17
+                                                S388.513,206.966,384,206.966z" />
+                                        </g>
+                                    </g>
+                                    <g>
+                                        <g>
+                                            <path d="M384,239.647H253.276c-4.512,0-8.17,3.657-8.17,8.17c0,4.513,3.658,8.17,8.17,8.17H384c4.513,0,8.17-3.657,8.17-8.17
+                                                C392.17,243.304,388.513,239.647,384,239.647z" />
+                                        </g>
+                                    </g>
+                                    <g>
+                                        <g>
+                                            <path d="M384,141.604H253.276c-4.512,0-8.17,3.657-8.17,8.17s3.658,8.17,8.17,8.17H384c4.513,0,8.17-3.657,8.17-8.17
+                                                S388.513,141.604,384,141.604z" />
+                                        </g>
+                                    </g>
+                                    <g>
+                                        <g>
+                                            <path d="M318.638,38.128c-85.597,0-155.234,69.637-155.234,155.234s69.637,155.234,155.234,155.234
+                                                c35.617,0,69.121-11.742,96.891-33.958c3.524-2.818,4.096-7.96,1.277-11.483c-2.818-3.524-7.961-4.097-11.483-1.277
+                                                c-24.842,19.872-54.818,30.377-86.685,30.377c-76.586,0-138.894-62.307-138.894-138.894S242.052,54.468,318.638,54.468
+                                                s138.894,62.307,138.894,138.894c0,31.867-10.505,61.843-30.377,86.685c-2.819,3.523-2.247,8.665,1.277,11.483
+                                                c3.521,2.818,8.663,2.248,11.483-1.277c22.215-27.77,33.958-61.274,33.958-96.891C473.872,107.765,404.235,38.128,318.638,38.128z
+                                                " />
+                                        </g>
+                                    </g>
+                                    <g>
+                                    </g>
+                                    <g>
+                                    </g>
+                                    <g>
+                                    </g>
+                                    <g>
+                                    </g>
+                                    <g>
+                                    </g>
+                                    <g>
+                                    </g>
+                                    <g>
+                                    </g>
+                                    <g>
+                                    </g>
+                                    <g>
+                                    </g>
+                                    <g>
+                                    </g>
+                                    <g>
+                                    </g>
+                                    <g>
+                                    </g>
+                                    <g>
+                                    </g>
+                                    <g>
+                                    </g>
+                                    <g>
+                                    </g>
+                                </svg>
+                            </span>
+                            <h2>02. Text-processing</h2>
+                            <p>The transcript is processed to generate a judgment</p>
+                            <br>
+                            <p> <a target="_blank" href="https://keras.io/">#Keras</a> <a target="_blank"
+                                    href="https://radimrehurek.com/gensim/">#Gensim</a> </p>
+                        </li>
+                    </ul>
+                </div>
+                <!-- .end .wrap -->
+            </section>
+
+            <section id="section-6" class="frame bg-blue aligncenter slide current" style="">
+                <div class="wrap">
+                    <h2 class="text-landing">Theory behind the model</h2>
+                    <p>Some NLP basics</p>
+                </div>
+                <!-- .end .wrap -->
+            </section>
+
+
+            <section class="slide current" id="section-7" style="">
+                <!--.wrap = container (width: 90%) -->
+                <div class="wrap size-50">
+                    <blockquote class="text-quote">
+                        <p>1&1 is a great employer.</p>
+                        <p><cite><a href="https://jobs.1und1.de/">Some employee</a></cite></p>
+                    </blockquote>
+                </div>
+                <!-- .end .wrap -->
+            </section>
+
+
+            <section class="slide current" id="section-8" style="">
+                <div class="wrap">
+                    <h2 class="aligncenter">Encoding</h2>
+                    <p class="aligncenter">From words to vectors</p>
+                    <div class="table-scrollable">
+                        <table>
+                            <tbody>
+
+                                <tr>
+                                    <td><b>WORD</b></td>
+                                    <td>1&1</td>
+                                    <td>is</td>
+                                    <td>a</td>
+                                    <td>great</td>
+                                    <td>employer</td>
+                                </tr>
+                                <tr>
+                                    <td><b>TOKEN</b></td>
+                                    <td>T1</td>
+                                    <td>T2</td>
+                                    <td>T3</td>
+                                    <td>T4</td>
+                                    <td>T5</td>
+                                </tr>
+                                <tr>
+                                    <td><b>ONE-HOT ENCODED</b></td>
+                                    <td>10000</td>
+                                    <td>01000</td>
+                                    <td>00100</td>
+                                    <td>00010</td>
+                                    <td>00001</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <!-- .end .wrap -->
+            </section>
+
+            <section class="bg-black aligncenter slide current" id="section-9" style="">
+                <span class="background dark" style="background-image:url('https://source.unsplash.com/Oaqk7qqNh_c/')"></span>
+                <div class="wrap">
+                  <h2 class="text-data">620,000</h2>
+                  <h3>Words in the Oxford Dictionary of English</h3>
+                </div>
+                <!-- .end .wrap -->
+              </section>
+
+            <section class="bg-black aligncenter slide current" id="section-10" style="">
+                <span class="background dark"
+                    style="background-image:url('http://ruder.io/content/images/size/w2000/2016/04/word_embeddings_colah.png')"></span>
+                <div class="wrap size-50">
+                    <h3><code>Word2Vec</code></h3>
+
+                    <p><code> Word2Vec is an algorithm that accepts text corpus as an input and outputs a vector representation for each word. It consists of a two-layer neural net, which learns the semantic behind the word.
+                        </code>
+                    </p>
+
+                </div>
+            </section>
+
+
+            <section class="slide current" id="section-11" style="">
+                <div class="wrap">
+                    <h1>Word2Vec training process</h1>
+                    <p>Two ways how we can learn semantic</p>
+                    <ul class="flexblock features fadeInUp">
+                        <li>
+                            <div>
+                                <h2>Skip-gram</h2>
+                                Given a set of sentences, the model loops on the words of each sentence trying to use the
+                                <strong>current word w in order to predict its neighbors</strong>
+                                <div class="content-center">
+                                    $$\text{w} \rightarrow \text{w}_{p+2}, \text{w} \rightarrow \text{w}_{p+1} ,
+                                    \text{w} \rightarrow \text{w}_{p-1}, \text{w} \rightarrow \text{w}_{p-2}$$
+                                </div>
+
+                            </div>
+                        </li>
+                        <li>
+                            <div>
+                                <h2>
+                                    CBOW
+                                </h2>
+                                Given a set of sentences, the model loops on the words of each sentence trying to use the
+                                <strong>surrounding words to predict the current word w</strong>
+                                <div class="content-center">
+                                    $$\text{w}_{p-2} \rightarrow \text{w}, \text{w}_{p-1} \rightarrow \text{w} ,
+                                    \text{w}_{p+2} \rightarrow \text{w}, \text{w}_{p+1} \rightarrow \text{w}$$
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <!-- .end .wrap -->
+            </section>
+
+            <section class="fullscreen bg-blue aligncenter slide current" id="section-12" style="">
+                <!-- .end .embed -->
+                <div class="warp content-left">
+                    <h2>Training Word2Vec </h2>
+                    <p>Using Skip-gram</p>
+                    <div class="table-scrollable">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Sentence</th>
+                                    <th>Training examples</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+
+                                <tr>
+                                    <td><strong>1&1</strong> is a great employer.</td>
+                                    <td>(1&1,is) (1&1,a)</td>
+                                </tr>
+                                <tr>
+                                    <td>1&1 <strong>is</strong> a great employer.</td>
+                                    <td>(is,1&1) (is,a) (is, great)</td>
+                                </tr>
+                                <tr>
+                                    <td>1&1 is <strong>a</strong> great employer.</td>
+                                    <td>(a,is) (a,1&1) (a,great) (a,employer)</td>
+                                </tr>
+                                <tr>
+                                    <td>1&1 is a <strong>great</strong> employer.</td>
+                                    <td>(great,a) (great,is) (great,employer)</td>
+                                </tr>
+                                <tr>
+                                    <td>1&1 is a great <strong>employer</strong>.</td>
+                                    <td>(employer,great) (employer,a)</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                </div>
+                <!-- .end .wrap -->
+            </section>
+
+
+            <section id="section-13" class="slide current" style="">
+                <div class="wrap">
+                    <h3>Vector-oriented reasoning</h3>
+                    <p>Doing <b>Math</b> with words</p>
+                    <ul class="flexblock blink border">
+                        <li>
+                            <a>
+                                <!--div required = padding li or li>a-->
+                                <div>
+                                    <h3>Singular/plural relation</h3>
+                                    Word2Vec is able to understand the relation between the plural and the singular of words
+                                    $$\left (\overrightarrow{cat} - \overrightarrow{cats} \right ) \approx \left
+                                    (\overrightarrow{car} - \overrightarrow{cars} \right )$$
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a>
+                                <!--div required = padding li or li>a-->
+                                <div>
+                                    <h3>Distance between words</h3>
+                                    Word2Vec can calculate the distance between words to find similarity
+                                    $$\left \| \overrightarrow{dog} - \overrightarrow{cat} \right \| = 0.7130494$$
+                                </div>
+                            </a>
+                        </li>
+
+                    </ul>
+                    <ul class="flexblock blink border">
+                        <li>
+                            <!--div required = padding li or li>a-->
+                            <a>
+                                <div>
+                                    <h3>Answering analogy questions</h3>
+                                    World analogies can be resolved with Word2Vec
+                                    $$\overrightarrow{x} = \overrightarrow{men} + \left (\overrightarrow{woman} -
+                                    \overrightarrow{queen} \right )$$
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <!--div required = padding li or li>a-->
+                            <a>
+                                <div>
+                                    <h3>Element-wise addition</h3>
+                                    Element-wise addition can be used to reveal relationships
+                                    $$\overrightarrow{German} + \overrightarrow{airline} =
+                                    \overrightarrow{Lufthansa}$$
+                                </div>
+                            </a>
+                        </li>
+
+                    </ul>
+                </div>
+                <!-- .end .wrap -->
+            </section>
+
+
+            <section class="bg-black aligncenter slide current" id="section-14" style="">
+                <span class="background dark"
+                    style="background-image:url('https://i2.wp.com/mlexplained.com/wp-content/uploads/2017/12/doc2vec.png?fit=1200%2C667&ssl=1')"></span>
+                <div class="wrap size-50">
+
+                    <h3><code>Doc2Vec</code></h3>
+
+                    <p><code> We can extend the <strong>Word2Vec</strong> model by adding another vector, 
+                                    the so called document-unique, to learn the vector representation of whole documents.
+                                </code>
+                    </p>
+
+                </div>
+            </section>
+
+
+            <section id="section-15" class="frame bg-blue aligncenter slide current" style="">
+                <div class="wrap">
+                    <h2 class="text-landing">Building a Model</h2>
+                    <p>How to compute a judgment</p>
+                </div>
+                <!-- .end .wrap -->
+            </section>
+
+
+            <section id="section-16" class="slide current" style="">
+                <div class="wrap">
+                    <div class="card-40 bg-white">
+                        <figure>
+                            <div class="content-center">
+                                <p>
+                                    $$\begin{pmatrix}
+                                    \left \| \overrightarrow{tscp} - \overrightarrow{ref_{0}} \right \|\\
+                                    \left \| \overrightarrow{tscp} - \overrightarrow{ref_{1}} \right \|\\
+                                    \left \| \overrightarrow{tscp} - \overrightarrow{ref_{2}} \right \|\\
+                                    [...] \\
+                                    \left \| \overrightarrow{tscp} - \overrightarrow{ref_{7}} \right \|\\
+                                    \left \| \overrightarrow{tscp} - \overrightarrow{ref_{8}} \right \|\\
+                                    \left \| \overrightarrow{tscp} - \overrightarrow{ref_{9}} \right \|
+                                    \end{pmatrix}$$
+                                </p>
+                            </div>
+                            </figcaption>
+                        </figure>
+                        <!-- end figure-->
+                        <div class="flex-content">
+                            <h2>
+                                The Idea behind the Model
+                            </h2>
+                            <p>Features to base a judgment on</p>
+                            <ul class="description">
+                                <li>
+                                    <strong class="text-label">1:</strong> Transform transcript with Doc2Vec</sup>
+                                </li>
+                                <li><strong class="text-label">2:</strong> Associate the transcript with the ten most referenced answers
+                                </li>
+                                <li><strong class="text-label">3:</strong> Calculate the distance between the transcript and the answers</li>
+                            </ul>
+                            <p>
+                                Each prompt is associated with a set of reference answers to fulfill the given task. Using Doc2Vec, the distance between the child's response and the reference answers can be computed. Based on those distances a judgment can be made.
+                            </p>
+                        </div>
+                        <!-- end .flex-content-->
+                    </div>
+                    <!-- .end .card50 -->
+                </div>
+                <!-- .end .wrap -->
+            </section>
+
+
+            <section id="section-17" class="slide current" style="">
+                <!--.wrap = container (width: 90%) -->
+                <div class="wrap">
+                    <div class="grid vertical-align">
+                        <div class="column">
+                            <h3><strong>Architecture of the Classifier</strong></h3>
+                            <p class="text-intro">A Binary classifier based on the distance of the ten most referenced
+                                answers to a prompt</p>
+                            <ul class="description">
+                                <li>
+                                    <strong class="text-label">Input :</strong> Distances between reference grammar and
+                                    transcript
+                                </li>
+                                <li><strong class="text-label">Layers:</strong> 2-Hidden Layers</li>
+                                <li><strong class="text-label">Output :</strong> Binary Judgment - reject or accept</li>
+                            </ul>
+                        </div>
+                        <!-- .end .column -->
+                        <div class="column">
+                            <pre><span class="code-comment">#Initializing Neural Network</span><br>classifier = Sequential()<br><br><span class="code-comment"># Adding the input layer and the first hidden layer</span><br>classifier.add(Dense(64, activation='relu', input_dim=10))<br>classifier.add(Dropout(0.2)) <br>classifier.add(Dense(64, activation='relu'))<br>classifier.add(Dropout(0.2))<br>classifier.add(Dense(1, activation='sigmoid'))
+                                        </pre>
+                        </div>
+                        <!-- .end .column -->
+                    </div>
+                    <!-- .end .grid -->
+                    <hr>
+                    <p class="aligncenter">Model based on <code>Keras</code></p>
+                </div>
+                <!-- .end .wrap -->
+            </section>
+
+
+            <section id="section-18" class="slide current" style="">
+                <!-- Overlay/Opacity: [class*="bg-"] > .background.dark or .light -->
+                <span class="background"
+                    style="background-image:url('https://source.unsplash.com/acJmkKwEMR4/')"></span>
+                <div class="wrap">
+                    <div class="content-left bg-trans-dark fadeInUp">
+                        <blockquote class="text-quote">
+                            <p>Optimizers update the weight parameters to minimize the loss function. The loss function acts
+                                as a guide for the terrain, telling the optimizer if it is moving in the right direction to
+                                reach the bottom of the valley, the global minimum.</p>
+                            <p><cite><a
+                                        href="https://medium.com/datadriveninvestor/overview-of-different-optimizers-for-neural-networks-e0ed119440c3"></a>
+                                    Renu Khandelwal
+                                </cite></p>
+                        </blockquote>
+                    </div>
+                </div>
+                <!-- .end .wrap -->
+            </section>
+
+
+            <section id="section-19" class="slide current" style="">
+                <div class="wrap size-60">
+                    <h3><strong>Usage of optimizers</strong></h3>
+                    <p class="text-intro">Stochastic gradient descent optimizer <strong>SGD</strong></p>
+                    <pre><span class="code-comment">#Defining the optimizer</span><br>sgd = SGD(lr=0.02, decay=1e-6, momentum=0.9, nesterov=True)<br>classifier.compile(loss='binary_crossentropy',<br>     optimizer=sgd,<br>     metrics=['accuracy'])
+
+                          </pre>
+                    <hr>
+                    <p class="aligncenter">Model based on <code>Keras</code></p>
+                </div>
+                <!-- .end .wrap -->
+            </section>
+
+            <section class="bg-black-blue slide current" id="section-20" style="">
+                <!--.wrap = container (width: 90%) -->
+                <div class="wrap">
+                    <blockquote class="text-quote">
+                        <p>If you have to specify a model parameter manually, it is probably a model hyperparameter.
+                        </p>
+                        <p><cite><a
+                                    href="https://machinelearningmastery.com/difference-between-a-parameter-and-a-hyperparameter/">machinelearningmastery.com
+                                </a></cite>
+                        </p>
+                    </blockquote>
+                </div>
+                <!-- .end .wrap -->
+            </section>
+
+            <section class="fullscreen slide current" id="section-21" style="">
+                <div class="card-30">
+
+                    <figure>
+                        <div width="8000px"> </div>
+                        <img src="img/spokencall/carbon.svg" alt="Áqaba, Jordan">
+                    </figure>
+                    <!-- end figure-->
+                    <div class="flex-content">
+                        <h3>Things you want at some point...</h3>
+                        <p>When the chaos starts to grow</p>
+                        <hr>
+                        <div class="grid">
+                            <div class="column">
+                                <h6>Isolated environments</h6>
+                                <p>Different frameworks have different dependencies. For example, to train a Doc2Vec
+                                    model you will need other libraries than for a keras classifier.</p>
+                                <p class="text-symbols">* * *</p>
+                                <h6>ManagedResources</h6>
+                                <p>Some experiments will run on the GPU while others will need more CPU or memory.</p>
+                            </div>
+                            <!-- end .column -->
+                            <div class="column">
+                                <h6>Versioning</h6>
+                                <p>With the hyperparameter search the parameters of a model are changed. You want to
+                                    version the models so you can compare changes.
+                                </p>
+                                <p class="text-symbols">* * *</p>
+                                <h6>Scaling</h6>
+                                <p>You want to run your experiments on as many computers as possible at the same time.
+                                </p>
+                            </div>
+                            <!-- end .column -->
+                        </div>
+                    </div>
+                    <!-- end .flex-content-->
+                </div>
+                <!-- end .card-50-->
+            </section>
+
+            <section id="section-22" class="frame bg-blue aligncenter slide current" style="">
+                <div class="wrap">
+                    <h2 class="text-landing">Using Kubernetes</h2>
+                    <p>scaling your experiments horizontally</p>
+                </div>
+                <!-- .end .wrap -->
+            </section>
+
+
+            <section id="section-23" class="slide current" style="">
+                <div class="wrap size-60">
+                    <h3> Kubernetes
+
+                        <svg class="fa-heart">
+                            <use xlink:href="#fa-heart"></use>
+                        </svg>
+
+                        Polyaxon</h3>
+                    <p class="text-intro">Operating machine learning experiments on Kubernetes
+                    </p>
+                    <pre> <div class="grid vertical-align">
+                                <div class="column ">
+                                 <img  src="img/spokencall/Kubernetes_logo_without_workmark.svg" alt="Google"/>
+                                </div>
+                                <!-- end .column -->
+                                <div class="column number">
+                                        <p><span>+</span></p>
+                                </div>
+                                <!-- end .column -->
+                                <div class="column">
+                                    <img  src="img/spokencall/polyaxon.svg" alt="Google"/>
+                                </div>
+                                <!-- end .column -->
+                                  </div>
+                                  </pre>
+                </div>
+                <!-- .end .wrap -->
+            </section>
+
+
+            <section id="section-24" class="slide current" style="">
+                <div class="wrap">
+                    <h3>Polyaxon</h3>
+                    <p>Why we chose polyaxon</p>
+                    <ul class="flexblock features">
+                        <li>
+                            <svg class="" data-cy="versioning-icon" version="1.1" viewBox="0 0 511.997 511.997"
+                                style="height: 34px; width: auto;">
+                                <g style="fill: rgb(24, 54, 81);">
+                                    <path
+                                        d="M274.959,490.059h-38.01c-20.009,0-36.288-16.278-36.288-36.287V288.437
+                                    c0-48.357,39.341-87.706,87.698-87.716l64.923-0.012V155.68c0-5.185,2.941-9.92,7.587-12.22c4.648-2.299,10.197-1.764,14.317,1.382
+                                    l131.451,100.318c3.38,2.579,5.362,6.586,5.362,10.837c0,4.251-1.984,8.259-5.362,10.837L375.185,367.154
+                                    c-4.121,3.147-9.67,3.681-14.317,1.382c-4.646-2.299-7.587-7.035-7.587-12.22v-45.025h-6.845c-7.53,0-13.634-6.105-13.634-13.634
+                                    c0-7.528,6.104-13.634,13.634-13.634h20.479c7.53,0,13.634,6.105,13.634,13.634v31.104l95.345-72.764l-95.345-72.764v31.104
+                                    c0,7.528-6.102,13.632-13.631,13.634l-78.554,0.015c-33.325,0.007-60.436,27.124-60.436,60.448v165.335
+                                    c0,4.974,4.046,9.02,9.021,9.02h38.01c4.974,0,9.02-4.046,9.02-9.02V353.706c0-7.528,6.104-13.634,13.634-13.634
+                                    s13.634,6.105,13.634,13.634v100.065C311.246,473.781,294.967,490.059,274.959,490.059z">
+                                    </path>
+                                </g>
+                                <g fill="#0070CE">
+                                    <path d="M214.393,298.395c-0.113,0-0.225-0.001-0.339-0.004c-7.398-0.181-13.301-6.229-13.301-13.629v-93.578
+                                    h-42.035v45.025c0,5.185-2.941,9.92-7.587,12.22c-4.645,2.301-10.195,1.764-14.317-1.382L5.362,146.728
+                                    C1.984,144.149,0,140.142,0,135.891c0-4.251,1.984-8.259,5.362-10.837L136.813,24.735c4.12-3.148,9.669-3.682,14.317-1.382
+                                    s7.587,7.035,7.587,12.22V80.6l64.923,0.012c48.357,0.008,87.698,39.356,87.698,87.714v46.026c0,7.527-6.102,13.631-13.629,13.634
+                                    l-9.344,0.003c-32.275,0.005-58.789,25.236-60.361,57.44C227.649,292.704,221.639,298.395,214.393,298.395z M145.084,163.916h69.302
+                                    c7.53,0,13.634,6.105,13.634,13.634v47.178c14.772-13.991,34.404-22.862,56.052-23.904v-32.498
+                                    c0-33.324-27.112-60.442-60.436-60.447l-78.554-0.015c-7.528-0.001-13.631-6.105-13.631-13.634V63.127l-95.345,72.764l95.345,72.764
+                                    v-31.104C131.451,170.021,137.556,163.916,145.084,163.916z"></path>
+                                </g>
+                            </svg>
+                            <div>
+
+
+                                <h2> Versioning and reproducability
+                                </h2>
+                                Reproducable results with a built-in version control for code and experiments.
+                            </div>
+                        </li>
+                        <li>
+                            <svg class="" data-cy="hyperparams-icon" viewBox="0 0 399 399"
+                                style="height: 34px; width: auto;">
+                                <g fill="#0070CE">
+                                    <circle r="16.679" cy="200.275" cx="200.232"></circle>
+                                </g>
+                                <g fill="#567D9C">
+                                    <rect height="12.347" width="12.347"
+                                        transform="matrix(0.7071,-0.7071,0.7071,0.7071,-32.1301,77.2589) " y="71.24"
+                                        x="71.021"></rect>
+                                    <rect height="12.347" width="12.347"
+                                        transform="matrix(0.7071,0.7071,-0.7071,0.7071,251.2567,39.8562) " y="317.048"
+                                        x="71.344"></rect>
+                                    <path
+                                        d="m362.171,63.03c13.576,0 24.76,-11.119 24.76,-24.76c0,-14.222 -10.537,-24.76 -24.76,-24.76c-13.576,0 -24.76,11.119 -24.76,24.76c0.065,13.641 11.184,24.76 24.76,24.76zm0,-37.107c6.788,0 12.347,5.56 12.347,12.347s-4.978,12.347 -12.347,12.347c-6.788,0 -12.347,-5.56 -12.347,-12.347c-0.001,-6.787 5.559,-12.347 12.347,-12.347z">
+                                    </path>
+                                    <path
+                                        d="m38.292,63.03c5.43,0 10.473,-1.81 14.61,-4.784l-1.681,1.681l8.727,8.727l8.727,-8.727l-8.727,-8.792l-1.745,1.745c3.038,-4.073 4.784,-9.115 4.784,-14.61c0,-13.576 -11.119,-24.76 -24.76,-24.76c-13.576,0 -24.76,11.119 -24.76,24.76c0.066,13.641 11.185,24.76 24.825,24.76zm0,-37.107c6.788,0 12.347,5.56 12.347,12.347s-5.56,12.347 -12.347,12.347s-12.347,-5.56 -12.347,-12.347c-0.065,-6.787 5.495,-12.347 12.347,-12.347z">
+                                    </path>
+                                    <path
+                                        d="m68.547,340.687l-8.727,-8.727l-8.727,8.727l2.133,2.133c-4.202,-3.362 -9.503,-5.301 -15.515,-5.301c-13.576,0 -24.76,11.119 -24.76,24.76c0,13.576 11.119,24.76 24.76,24.76c13.576,0 24.76,-11.119 24.76,-24.76c0,-5.883 -2.004,-11.313 -5.366,-15.58l2.78,2.78l8.662,-8.792zm-30.901,33.939c-6.788,0 -12.347,-5.56 -12.347,-12.347s5.56,-12.347 12.347,-12.347s12.347,5.56 12.347,12.347c0,6.788 -4.913,12.347 -12.347,12.347z">
+                                    </path>
+                                    <path
+                                        d="m360.943,337.519c-13.576,0 -24.76,11.119 -24.76,24.76c0,13.576 11.119,24.76 24.76,24.76c13.64,0 24.76,-11.119 24.76,-24.76c-0.001,-13.641 -11.12,-24.76 -24.76,-24.76zm0,37.107c-6.788,0 -12.347,-5.56 -12.347,-12.347s5.56,-12.347 12.347,-12.347s12.347,5.56 12.347,12.347c0.065,6.788 -5.56,12.347 -12.347,12.347z">
+                                    </path>
+                                </g>
+                                <g fill="#183651">
+                                    <path
+                                        d="m375.811,252.832c-11.766,0 -21.01,8.016 -24.113,18.554l-38.982,0c-3.103,-16.097 -17.325,-28.444 -34.586,-28.444c-7.434,0 -14.222,2.457 -19.782,6.206l-20.428,-20.428c6.206,-8.016 9.891,-17.907 9.891,-29.026s-3.685,-21.01 -9.891,-29.026l20.428,-20.428c5.56,3.685 12.348,6.206 19.782,6.206c19.135,0 35.232,-15.451 35.232,-35.232c0,-19.135 -15.451,-35.232 -35.232,-35.232c-19.135,0 -35.232,15.451 -35.232,35.232c0,7.434 2.457,14.222 6.206,19.782l-20.428,20.364c-8.016,-6.206 -17.907,-9.891 -29.026,-9.891s-21.01,3.685 -29.026,9.891l-19.782,-19.135c3.685,-5.56 6.206,-12.347 6.206,-19.782c0,-17.325 -12.347,-31.547 -29.026,-34.651l0,-38.919c11.119,-2.457 19.135,-12.347 19.135,-24.113c0,-13.576 -11.119,-24.76 -24.76,-24.76c-13.576,0 -24.76,11.119 -24.76,24.76c0,11.119 7.434,20.428 17.907,23.467l0,39.563c-5.107,0.97 -9.762,2.909 -13.77,5.689l-7.305,-7.305l-8.727,8.727l7.24,7.24c-4.073,5.689 -6.4,12.671 -6.4,20.299c0,19.135 15.451,35.232 35.232,35.232c7.434,0 14.222,-2.457 19.782,-6.206l20.428,20.428c-6.206,8.016 -9.891,17.907 -9.891,29.026c0,11.119 3.685,21.01 9.891,29.026l-19.782,19.782c-5.56,-3.685 -12.347,-6.206 -19.782,-6.206c-17.325,0 -31.547,12.347 -34.651,28.444l-38.917,-0.646c-2.457,-10.537 -12.347,-18.554 -24.113,-18.554c-13.576,0 -24.76,11.119 -24.76,24.76s11.119,24.76 24.76,24.76c11.119,0 21.01,-8.016 23.467,-18.554l38.917,0.646c0.646,4.913 3.103,9.891 5.56,14.222l-7.434,7.434l8.663,8.663l7.434,-7.434c4.331,3.103 8.663,4.978 14.222,5.56l0.646,38.917c-10.537,3.103 -18.554,12.347 -18.554,23.467c0,13.576 11.119,24.76 24.76,24.76c13.576,0 24.76,-11.119 24.76,-24.76c0,-11.766 -8.016,-21.01 -18.554,-24.113l-0.646,-38.917c16.097,-3.103 28.444,-17.325 28.444,-34.586c0,-7.434 -2.457,-14.222 -6.206,-19.782l20.428,-20.428c8.016,6.206 17.907,9.891 29.026,9.891c11.119,0 21.01,-3.685 29.026,-9.891l20.428,20.428c-3.685,5.56 -6.206,12.348 -6.206,19.782c0,19.135 15.451,35.232 35.232,35.232c17.325,0 31.547,-12.347 34.586,-29.026l38.917,-0.646c3.103,10.537 12.347,18.554 23.467,18.554c13.576,0 24.76,-11.119 24.76,-24.76c0.584,-12.993 -10.535,-24.113 -24.111,-24.113zm-97.681,-153.341c12.347,0 22.885,9.891 22.885,22.885s-10.537,22.238 -22.885,22.238s-22.238,-9.891 -22.238,-22.238s9.891,-22.885 22.238,-22.885zm-167.563,-74.796c0,-6.788 5.56,-12.347 12.347,-12.347s12.347,5.56 12.347,12.347c0,6.788 -5.56,12.347 -12.347,12.347s-12.347,-5.559 -12.347,-12.347zm11.766,120.566c-12.347,0 -22.885,-9.891 -22.885,-22.885s9.891,-22.885 22.885,-22.885s22.885,9.891 22.885,22.885s-10.538,22.885 -22.885,22.885zm-97.681,144.678c-6.788,0 -12.347,-5.56 -12.347,-12.347c0,-6.788 5.56,-12.347 12.347,-12.347s12.347,5.56 12.347,12.347c0,6.788 -5.559,12.347 -12.347,12.347zm110.674,85.916c0,6.788 -5.56,12.347 -12.347,12.347c-6.788,0 -12.347,-5.56 -12.347,-12.347s5.56,-12.347 12.347,-12.347c6.788,-0.001 12.347,5.559 12.347,12.347zm-12.993,-74.796c-12.347,0 -22.885,-9.891 -22.885,-22.885s9.891,-22.885 22.885,-22.885c12.347,0 22.885,9.891 22.885,22.885c-0.001,12.994 -10.538,22.885 -22.885,22.885zm77.899,-65.552c-19.135,0 -35.232,-15.451 -35.232,-35.232c0,-19.135 15.451,-35.232 35.232,-35.232c19.135,0 35.232,15.451 35.232,35.232c0,19.135 -16.097,35.232 -35.232,35.232zm77.898,65.552c-12.347,0 -22.885,-9.891 -22.885,-22.885c0,-12.347 9.891,-22.885 22.885,-22.885c12.994,0 22.885,9.891 22.885,22.885c0,12.347 -10.537,22.885 -22.885,22.885zm97.681,-11.12c-6.788,0 -12.347,-5.56 -12.347,-12.347c0,-6.788 5.56,-12.347 12.347,-12.347c6.788,0 12.347,5.56 12.347,12.347c0.001,6.788 -5.559,12.347 -12.347,12.347z">
+                                    </path>
+                                </g>
+                            </svg>
+                            <div>
+                                <h2>
+                                    Hyperparameter search
+                                </h2>
+                                Run group of experiments in parallel and in a distributed way.
+                            </div>
+                        </li>
+                        <li>
+                            <svg class="" data-cy="infrastructure-icon" viewBox="0 0 57 66" version="1.1"
+                                style="height: 34px; width: auto;">
+                                <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                                    <g transform="translate(-1070.000000, -441.000000)" stroke-width="2">
+                                        <g id="OEMs" transform="translate(958.000000, 442.000000)">
+                                            <g id="icn-clustering" transform="translate(113.000000, 0.000000)">
+                                                <circle id="Oval-2" stroke="#B5BFC7" cx="27.8974359" cy="32"
+                                                    r="26.2564103"></circle>
+                                                <circle id="Oval-3" stroke="#0070CE" fill="#FFFFFF" cx="27.8974359"
+                                                    cy="5.74358974" r="5.74358974"></circle>
+                                                <circle id="Oval-3" stroke="#183651" fill="#FFFFFF" cx="49.2307692"
+                                                    cy="18.0512821" r="5.74358974"></circle>
+                                                <circle id="Oval-3" stroke="#233240" fill="#FFFFFF" cx="5.74358974"
+                                                    cy="18.0512821" r="5.74358974"></circle>
+                                                <circle id="Oval-3" stroke="#233240" fill="#FFFFFF" cx="49.2307692"
+                                                    cy="47.5223214" r="5.74358974"></circle>
+                                                <circle id="Oval-3" stroke="#183651" fill="#FFFFFF" cx="5.74358974"
+                                                    cy="47.5223214" r="5.74358974"></circle>
+                                                <circle id="Oval-3" stroke="#0070CE" fill="#FFFFFF" cx="27.8974359"
+                                                    cy="58.2564103" r="5.74358974"></circle>
+                                            </g>
+                                        </g>
+                                    </g>
+                                </g>
+                            </svg>
+                            <div>
+                                <h2>
+
+                                    Runs on any infrastructure
+                                </h2>
+                                Deploy Polyaxon in the cloud, on-premises or in hybrid environments.
+
+                            </div>
+                        </li>
+                        <li>
+                            <svg class="" data-cy="resources-icon" version="1.1" viewBox="0 0 512 512"
+                                xml:space="preserve" style="height: 34px; width: auto;">
+                                <g fill="#183651">
+                                    <path d="M323.928,176.905H188.072c-26.258,0-47.621-21.363-47.621-47.621V59.066
+                                    c0-26.258,21.363-47.621,47.621-47.621h135.857c26.258,0,47.621,21.363,47.621,47.621v70.218
+                                    C371.549,155.542,350.186,176.905,323.928,176.905z M188.072,41.087c-9.915,0-17.981,8.065-17.981,17.981v70.218
+                                    c0,9.915,8.065,17.981,17.981,17.981h135.857c9.914,0,17.981-8.065,17.981-17.981v-70.22c0-9.914-8.065-17.981-17.981-17.981
+                                    H188.072V41.087z"></path>
+                                </g>
+                                <g fill="#567D9C">
+                                    <path d="M442.078,347.403c-8.184,0-14.82-6.636-14.82-14.82v-41.272h-63.902
+                                    c-8.184,0-14.82-6.636-14.82-14.82c0-8.184,6.636-14.82,14.82-14.82h67.141c14.558,0,26.4,11.843,26.4,26.4v44.51
+                                    C456.898,340.767,450.262,347.403,442.078,347.403z"></path>
+                                    <path
+                                        d="M470.35,457.608h-56.545c-22.965,0-41.65-18.683-41.65-41.65v-56.545
+                                    c0-22.965,18.683-41.65,41.65-41.65h56.545c22.966,0,41.65,18.683,41.65,41.65v27.916c0,8.184-6.636,14.82-14.82,14.82
+                                    s-14.82-6.636-14.82-14.82v-27.916c0-6.623-5.388-12.01-12.01-12.01h-56.545c-6.623,0-12.01,5.387-12.01,12.01v56.545
+                                    c0,6.623,5.387,12.01,12.01,12.01h56.545c8.184,0,14.82,6.636,14.82,14.82S478.534,457.608,470.35,457.608z">
+                                    </path>
+                                </g>
+                                <g fill="#0070CE">
+                                    <path
+                                        d="M69.923,347.403c-8.184,0-14.82-6.636-14.82-14.82v-44.51c0-14.558,11.843-26.4,26.4-26.4h215.054
+                                    c8.184,0,14.82,6.636,14.82,14.82c0,8.184-6.636,14.82-14.82,14.82H84.743v41.272C84.743,340.767,78.107,347.403,69.923,347.403z">
+                                    </path>
+                                    <path
+                                        d="M256,439.094c-8.184,0-14.82-6.636-14.82-14.82V220.927c0-8.184,6.636-14.82,14.82-14.82
+                                    c8.184,0,14.82,6.636,14.82,14.82v203.346C270.82,432.459,264.185,439.094,256,439.094z">
+                                    </path>
+                                    <path
+                                        d="M98.196,457.608H41.65c-22.966,0-41.65-18.683-41.65-41.65v-56.545
+                                    c0-22.965,18.683-41.65,41.65-41.65h56.547c22.965,0,41.65,18.683,41.65,41.65v27.916c0,8.184-6.636,14.82-14.82,14.82
+                                    s-14.82-6.636-14.82-14.82v-27.916c0-6.623-5.387-12.01-12.01-12.01H41.65c-6.623,0-12.01,5.387-12.01,12.01v56.545
+                                    c0,6.623,5.389,12.01,12.01,12.01h56.547c8.184,0,14.82,6.636,14.82,14.82S106.38,457.608,98.196,457.608z">
+                                    </path>
+                                    <path
+                                        d="M284.272,500.555h-56.544c-22.966,0-41.65-18.683-41.65-41.65V402.36
+                                    c0-22.966,18.683-41.65,41.65-41.65h56.544c22.966,0,41.65,18.683,41.65,41.65v56.544
+                                    C325.923,481.87,307.238,500.555,284.272,500.555z M227.728,390.35c-6.623,0-12.01,5.388-12.01,12.01v56.544
+                                    c0,6.623,5.389,12.01,12.01,12.01h56.544c6.623,0,12.01-5.388,12.01-12.01V402.36c0-6.623-5.388-12.01-12.01-12.01H227.728z">
+                                    </path>
+                                </g>
+                            </svg>
+                            <div>
+                                <h2>
+                                    User resources allocation
+                                </h2>
+                                Manage your team's resources and parallelism quotas.
+                            </div>
+                        </li>
+                        <li>
+                            <svg class="" data-cy="scalable-icon" viewBox="0 0 61 61" version="1.1"
+                                style="height: 34px; width: auto;">
+                                <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                                    <g transform="translate(-309.000000, -442.000000)" stroke-width="2">
+                                        <g transform="translate(198.000000, 439.000000)">
+                                            <g transform="translate(110.000000, 0.000000)">
+                                                <g transform="translate(1.000000, 3.000000)">
+                                                    <path
+                                                        d="M4,1 C2.34314575,1 1,2.34314575 1,4 L1,57 C1,58.6568542 2.34314575,60 4,60 L57,60 C58.6568542,60 60,58.6568542 60,57 L60,4 C60,2.34314575 58.6568542,1 57,1 L4,1 Z"
+                                                        stroke="#001051"></path>
+                                                    <path
+                                                        d="M4,11 C2.34314575,11 1,12.3431458 1,14 L1,57 C1,58.6568542 2.34314575,60 4,60 L47,60 C48.6568542,60 50,58.6568542 50,57 L50,14 C50,12.3431458 48.6568542,11 47,11 L4,11 Z"
+                                                        stroke="#183651"></path>
+                                                    <path
+                                                        d="M4,21 C2.34314575,21 1,22.3431458 1,24 L1,57 C1,58.6568542 2.34314575,60 4,60 L37,60 C38.6568542,60 40,58.6568542 40,57 L40,24 C40,22.3431458 38.6568542,21 37,21 L4,21 Z"
+                                                        stroke="#0070CE"></path>
+                                                    <path
+                                                        d="M4,31 C2.34314575,31 1,32.3431458 1,34 L1,57 C1,58.6568542 2.34314575,60 4,60 L27,60 C28.6568542,60 30,58.6568542 30,57 L30,34 C30,32.3431458 28.6568542,31 27,31 L4,31 Z"
+                                                        stroke="#0070CE"></path>
+                                                    <rect stroke="#ADB8C0" x="1" y="41" width="19" height="19" rx="4">
+                                                    </rect>
+                                                </g>
+                                            </g>
+                                        </g>
+                                    </g>
+                                </g>
+                            </svg>
+                            <div>
+                                <h2>
+
+                                    Scalable
+                                </h2>
+                                Polyaxon can easily scale horizontally by adding more nodes.
+                            </div>
+                        </li>
+                        <li>
+                            <svg class="" data-cy="descriptive-icon" version="1.1" viewBox="0 0 511.999 511.999"
+                                style="height: 34px; width: auto;">
+                                <g style="fill: rgb(24, 54, 81);">
+                                    <path
+                                        d="M147.112,112.402H61.693c-6.018,0-11.436-3.65-13.697-9.228c-2.261-5.578-0.913-11.969,3.408-16.159
+                                    l85.419-82.844c4.261-4.134,10.582-5.316,16.048-3.002s9.02,7.675,9.02,13.61v82.846
+                                    C161.891,105.786,155.274,112.402,147.112,112.402z M98.158,82.845h34.175V49.7L98.158,82.845z">
+                                    </path>
+                                    <path d="M450.307,319.951c-8.161,0-14.779-6.617-14.779-14.779V36.132c0-3.625-3.247-6.574-7.237-6.574
+                                    H215.657c-8.161,0-14.779-6.616-14.779-14.779S207.497,0,215.657,0h212.634c20.29,0,36.795,16.208,36.795,36.131v269.04
+                                    C465.086,313.334,458.47,319.951,450.307,319.951z"></path>
+                                    <path
+                                        d="M428.291,511.999H83.71c-20.29,0-36.795-16.208-36.795-36.131V97.624
+                                    c0-3.998,1.62-7.825,4.49-10.608l85.417-82.844c5.858-5.682,15.213-5.541,20.899,0.319c5.682,5.858,5.539,15.215-0.321,20.897
+                                    l-80.929,78.49v371.99c0,3.625,3.247,6.574,7.237,6.574h344.582c3.99,0,7.237-2.95,7.237-6.574v-92.663
+                                    c0-8.162,6.618-14.779,14.779-14.779c8.161,0,14.779,6.617,14.779,14.779v92.663C465.086,495.791,448.58,511.999,428.291,511.999z">
+                                    </path>
+                                    <path
+                                        d="M450.307,112.402h-234.65c-8.161,0-14.779-6.616-14.779-14.779s6.618-14.779,14.779-14.779h219.871
+                                    V39.852c0-5.677-4.617-10.293-10.293-10.293H215.656c-8.161,0-14.779-6.616-14.779-14.779S207.495,0,215.656,0h209.579
+                                    c21.973,0,39.851,17.878,39.851,39.851v57.772C465.086,105.786,458.47,112.402,450.307,112.402z">
+                                    </path>
+                                </g>
+                                <g fill="#567D9C">
+                                    <path
+                                        d="M376.448,255.506H135.553c-8.161,0-14.779-6.617-14.779-14.779v-67.983
+                                    c0-8.162,6.618-14.779,14.779-14.779h240.895c8.161,0,14.779,6.616,14.779,14.779v67.983
+                                    C391.227,248.89,384.609,255.506,376.448,255.506z M150.332,225.948H361.67v-38.425H150.332V225.948L150.332,225.948z">
+                                    </path>
+                                </g>
+                                <g fill="#0070CE">
+                                    <path
+                                        d="M222.219,386.546h-86.545c-8.161,0-14.779-6.616-14.779-14.779c0-8.162,6.618-14.779,14.779-14.779
+                                    h86.545c8.161,0,14.779,6.616,14.779,14.779C236.998,379.929,230.382,386.546,222.219,386.546z">
+                                    </path>
+                                    <path d="M243.053,318.563H135.676c-8.161,0-14.779-6.617-14.779-14.779s6.618-14.779,14.779-14.779h107.377
+                                    c8.161,0,14.779,6.616,14.779,14.779S251.215,318.563,243.053,318.563z"></path>
+                                    <path
+                                        d="M332.481,426.941c-32.324,0-58.623-26.297-58.623-58.622s26.299-58.623,58.623-58.623
+                                s58.623,26.297,58.623,58.623S364.806,426.941,332.481,426.941z M332.481,339.253c-16.028,0-29.066,13.038-29.066,29.066
+                                c0,16.026,13.038,29.064,29.066,29.064s29.066-13.038,29.066-29.064C361.547,352.291,348.509,339.253,332.481,339.253z">
+                                    </path>
+                                </g>
+                            </svg>
+                            <div>
+                                <h2>
+                                    Powerful interface
+                                </h2>
+                                Author jobs, experiments, and pipelines in Json, YAML, and Python.
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <!-- .end .wrap -->
+            </section>
+
+
+            <section class="fullscreen slide current" id="section-25" style="">
+                <div class="card-30">
+                    <!-- end figure-->
+                    <div class="flex-content">
+                        <h2>Polyaxon Concepts
+                        </h2>
+                        <p>Running your Models</p>
+                        <ul class="flexblock specs">
+                            <li>
+                                <div>
+                                    <h2>Project</h2>
+                                    A Project in Polyaxon is very similar to a project in GitHub, it aims at organizing
+                                    your efforts to solve a specific problem. A project consist of a name and a
+                                    description, the code to execute, the data and a polyaxonfile.yml.
+                                </div>
+                            </li>
+                            <li>
+                                <div>
+                                    <h2>Experiment</h2>
+                                    An Experiment is the execution of your model with data and the provided parameters
+                                    on the cluster. An Experiment Job is the Kubernetes pod running on the cluster for a
+                                    specific experiment.
+                                </div>
+                            </li>
+                            <li>
+                                <div>
+                                    <h2>Experiment Group</h2>
+                                    A selection of experiments to compare. It might be the same version of your model
+                                    and data, but with different hyperparameters based on a hyperparameter search algorithm.
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- end .flex-content-->
+                </div>
+                <!-- end .card-50-->
+            </section>
+
+            <section class="bg-black aligncenter slide current" id="section-26" style="">
+                <span class="background dark"
+                    style="background-image:url('https://source.unsplash.com/yRAK7Vcyl_Q/')"></span>
+                <div class="wrap">
+                    <h2 class="text-data">Live Demo</h2>
+                    <h3>Quick Hands on </h3>
+                </div>
+                <!-- .end .wrap -->
+            </section>
+
+            <section id="section-27" class="slide current" style="">
+                <div class="wrap">
+                    <h1>Takeaways</h1>
+                    <ul class="flexblock features">
+                        <li>
+                            <div>
+                                <h2>
+                                    Use Docker
+                                </h2>
+                                Docker is awesome to isolate your experiement and model dependencies
+                            </div>
+                        </li>
+                        <li>
+                            <div>
+                                <h2>
+                                    Use Kubernetes
+                                </h2>
+                                Kubernetes is awesome to orchestrate your workload
+                            </div>
+                        </li>
+                        <li>
+                            <div>
+                                <h2>
+                                    Use Git
+                                </h2>
+                                Use Git to version your models
+                            </div>
+                        </li>
+                        <li>
+                            <div>
+                                <h2>
+                                    Use Polyaxon
+                                </h2>
+                                To automate hyperparameter search
+                            </div>
+                        </li>
+                        <li>
+                            <div>
+                                <h2>
+                                    Use Word2Vec/Doc2Vec
+                                </h2>
+                                To find semantics in text
+                            </div>
+                        </li>
+                        <li>
+                            <div>
+                                <h2>
+                                    NLP is fun
+                                </h2>
+                                Start your own experiments today!
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <!-- .end .wrap -->
+            </section>
+
+            <section class="bg-black aligncenter slide current" id="section-28" style="">
+                <span class="background dark"
+                    style="background-image:url('https://source.unsplash.com/Mm_cz9t0LYc/)"></span>
+                <div class="wrap">
+                    <ul class="flexblock metrics">
+                        <li>
+                                <div>
+                                    <strong>leon.gottschick@1und1.de</strong>
+                                </div>
+                        </li>
+                        <li>
+                                <div>
+                                    <strong>lgottschick</strong>
+                                </div>
+                        </li>
+                    </ul>
+                </div>
+                <!-- .end .wrap -->
+                <footer>
+                    <!--.wrap o <nav> = container 1200px -->
+                    <div class="wrap">
+                        <p>
+                            <span class="alignleft">
+                                <a href="https://github.com/cfreemoser/talks" title="Google">Something Wrong?</a></span>
+                            <span class="alignright">
+                                <a href="https://webslides.tv" title="Twitter">
+                                    Made with WebSlides
+                                </a>
+                            </span>
+                        </p>
+                    </div>
+                </footer>
+
+            </section>
+
+            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="512"
+                height="512" viewBox="0 0 512 512">
+            </svg>
+
+
+        </article>
+    </main>
+    <!--main-->
+
+    <!-- Required -->
+    <script src="../static/js/webslides.js"></script>
+
+    <script>
+        window.ws = new WebSlides();
+        document.write(
+            '<script src="http://' +
+            (location.host || '${1:localhost}').split(':')[0] +
+            ':${2:35729}/livereload.js?snipver=1"></' +
+            'script>'
+        );
+    </script>
+
+
+    <!-- OPTIONAL - svg-icons.js (fontastic.me - Font Awesome as svg icons) -->
+    <script defer src="../static/js/svg-icons.js"></script>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+</body>
+
+</html>
